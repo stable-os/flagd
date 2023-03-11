@@ -19,6 +19,7 @@ touch /etc/stable-os/flags/bool3
 echo "1" > /etc/stable-os/flags/num1
 echo "2" > /etc/stable-os/flags/num2
 echo "3" > /etc/stable-os/flags/num3
+touch /etc/stable-os/flags/boot.bootmanager.refind_enabled
 
 echo "Running flagd..."
 cargo run

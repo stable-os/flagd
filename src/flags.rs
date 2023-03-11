@@ -1,6 +1,6 @@
 use std::fs;
 
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub enum FlagChange {
     Added,
     Removed,
@@ -86,8 +86,6 @@ pub fn copy_flags_to_old() {
         if !entry.file_type().unwrap().is_file() {
             continue;
         }
-
-        println!("Copying {} to /etc/stable-os/flags/old", file_name);
 
         // Copy the file to /etc/stable-os/flags/old
         fs::copy(
